@@ -1,13 +1,150 @@
 <!doctype html>
+<!-- 
+  HTML5 Document Type Declaration
+  This tells the browser that this is a modern HTML document
+  and enables HTML5 features and better rendering
+-->
+
 <html lang="en">
+<!-- 
+  Root HTML element with language attribute set to English
+  The lang attribute is important for:
+  - Accessibility (screen readers)
+  - SEO optimization
+  - Browser language detection
+  - Spell checking
+-->
+
   <head>
+    <!-- 
+      Head section contains metadata about the document
+      This includes character encoding, viewport settings,
+      title, and links to external resources
+    -->
+    
+    <!-- 
+      Character encoding declaration
+      UTF-8 supports all Unicode characters including
+      emojis, special symbols, and international text
+    -->
     <meta charset="UTF-8" />
+    
+    <!-- 
+      Favicon link - the small icon displayed in browser tabs
+      This SVG favicon is provided by Vite by default
+      You can replace it with your own custom favicon
+    -->
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    
+    <!-- 
+      Viewport meta tag - essential for responsive design
+      This ensures the page renders properly on mobile devices
+      - width=device-width: Sets viewport width to device width
+      - initial-scale=1.0: Sets initial zoom level to 100%
+      - user-scalable: Allows users to zoom in/out (default behavior)
+    -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- 
+      Page title - displayed in browser tab and search results
+      This is a placeholder title that should be customized
+      for your specific application
+    -->
     <title>Vite + React</title>
+    
+    <!-- 
+      Additional meta tags that could be added for better SEO:
+      
+      <meta name="description" content="React State Checkpoint application demonstrating React fundamentals">
+      <meta name="keywords" content="React, JavaScript, Frontend, Web Development">
+      <meta name="author" content="Your Name">
+      <meta name="robots" content="index, follow">
+      
+      Open Graph tags for social media sharing:
+      <meta property="og:title" content="React State Checkpoint">
+      <meta property="og:description" content="Learn React fundamentals with this interactive application">
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="https://yourdomain.com">
+    -->
   </head>
+
   <body>
-    <div id="root"></div>
+    <!-- 
+      Body section contains the visible content of the page
+      This is where the React application will be mounted
+    -->
+    
+    <!-- 
+      Root div element - this is the mounting point for the React application
+      The React app will render inside this div, replacing its contents
+      
+      Important characteristics:
+      - Must have a unique ID that matches what's referenced in main.jsx
+      - Should be empty initially (React will populate it)
+      - Can contain fallback content for users with JavaScript disabled
+    -->
+    <div id="root">
+      <!-- 
+        Fallback content for users with JavaScript disabled
+        This content will be visible until React loads and renders
+        
+        Example fallback content:
+        <noscript>
+          <h1>JavaScript Required</h1>
+          <p>This application requires JavaScript to function properly.</p>
+          <p>Please enable JavaScript in your browser and refresh the page.</p>
+        </noscript>
+      -->
+    </div>
+    
+    <!-- 
+      Script tag that loads the main JavaScript entry point
+      
+      Attributes explained:
+      - type="module": Enables ES6 module syntax and modern JavaScript features
+      - src="/src/main.jsx": Path to the main React application file
+      
+      The /src/ path is relative to the project root and will be processed
+      by Vite during development and build
+    -->
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- 
+      Additional considerations for production applications:
+      
+      1. Performance optimization:
+         - Add preload links for critical resources
+         - Implement service worker for offline functionality
+         - Add resource hints (dns-prefetch, preconnect)
+      
+      2. Analytics and monitoring:
+         - Google Analytics, Google Tag Manager
+         - Error tracking (Sentry, LogRocket)
+         - Performance monitoring (Web Vitals)
+      
+      3. Security:
+         - Content Security Policy (CSP) headers
+         - Subresource Integrity (SRI) for external resources
+         - Security headers (HSTS, X-Frame-Options)
+    -->
   </body>
 </html>
+
+<!-- 
+  HTML Structure Summary:
+  
+  This file serves as the entry point for the React State Checkpoint application.
+  It provides the basic HTML structure and the mounting point for the React app.
+  
+  Key elements:
+  - Proper HTML5 doctype and language declaration
+  - Essential meta tags for responsive design and character encoding
+  - Root div with id="root" for React mounting
+  - Script tag loading the main React application
+  
+  The React application will:
+  1. Load and initialize when this HTML file is opened
+  2. Mount into the #root div element
+  3. Take over the page rendering and user interaction
+  4. Handle all dynamic content and state management
+-->

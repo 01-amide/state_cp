@@ -1,67 +1,160 @@
+/**
+ * index.css - Global styles for the React State Checkpoint application
+ * 
+ * This file contains global CSS rules that apply to the entire application.
+ * It establishes the foundation styling including:
+ * - CSS custom properties (CSS variables)
+ * - Global typography and layout rules
+ * - Dark/light theme support
+ * - Accessibility considerations
+ * - Responsive design foundations
+ * - Interactive element styling
+ */
+
+/* CSS Custom Properties (CSS Variables) - Global design tokens */
+/* These variables can be reused throughout the application for consistency */
 :root {
+  /* Typography system - establishes the font family hierarchy */
+  /* system-ui provides native system fonts for better performance and familiarity */
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  
+  /* Line height for better readability - 1.5 is optimal for body text */
   line-height: 1.5;
+  
+  /* Font weight - 400 is normal/regular weight */
   font-weight: 400;
 
+  /* Color scheme support - enables automatic dark/light theme switching */
   color-scheme: light dark;
+  
+  /* Primary text color with transparency for better contrast */
+  /* rgba(255, 255, 255, 0.87) provides 87% opacity white */
   color: rgba(255, 255, 255, 0.87);
+  
+  /* Background color - dark theme default */
   background-color: #242424;
 
+  /* Font synthesis - prevents browser from creating synthetic fonts */
+  /* This ensures consistent rendering across different systems */
   font-synthesis: none;
+  
+  /* Text rendering optimization for better readability */
   text-rendering: optimizeLegibility;
+  
+  /* Font smoothing for better text appearance on webkit browsers */
   -webkit-font-smoothing: antialiased;
+  
+  /* Font smoothing for better text appearance on Firefox */
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Link styling - applies to all anchor tags */
 a {
+  /* Medium font weight for better link visibility */
   font-weight: 500;
+  
+  /* Primary link color using CSS custom property */
   color: #646cff;
+  
+  /* Remove default underline decoration */
   text-decoration: inherit;
 }
+
+/* Link hover state - provides visual feedback for user interaction */
 a:hover {
+  /* Darker shade of the primary color for hover effect */
   color: #535bf2;
 }
 
+/* Body element styling - establishes the page foundation */
 body {
+  /* Remove default browser margins */
   margin: 0;
+  
+  /* Use flexbox for centering content */
   display: flex;
+  
+  /* Center content both horizontally and vertically */
   place-items: center;
+  
+  /* Minimum width to prevent layout breaking on small screens */
   min-width: 320px;
+  
+  /* Minimum height to fill the viewport */
   min-height: 100vh;
 }
 
+/* Heading styling - applies to all h1 elements */
 h1 {
+  /* Large font size for main headings */
   font-size: 3.2em;
+  
+  /* Tight line height for heading text */
   line-height: 1.1;
 }
 
+/* Button styling - applies to all button elements */
 button {
+  /* Rounded corners for modern button appearance */
   border-radius: 8px;
+  
+  /* Transparent border that will be visible on hover/focus */
   border: 1px solid transparent;
+  
+  /* Internal spacing for comfortable button sizing */
   padding: 0.6em 1.2em;
+  
+  /* Font size relative to root element */
   font-size: 1em;
+  
+  /* Medium font weight for button text */
   font-weight: 500;
+  
+  /* Inherit font family from parent for consistency */
   font-family: inherit;
+  
+  /* Dark background color for button */
   background-color: #1a1a1a;
+  
+  /* Pointer cursor to indicate clickable element */
   cursor: pointer;
+  
+  /* Smooth transition for border color changes */
   transition: border-color 0.25s;
 }
+
+/* Button hover state - provides visual feedback */
 button:hover {
+  /* Change border color on hover for interactive feedback */
   border-color: #646cff;
 }
+
+/* Button focus states - important for accessibility and keyboard navigation */
 button:focus,
 button:focus-visible {
+  /* Custom focus outline for better visibility */
+  /* -webkit-focus-ring-color provides system-appropriate focus styling */
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Media query for light color scheme preference */
+/* This enables automatic theme switching based on user preference */
 @media (prefers-color-scheme: light) {
+  /* Override root variables for light theme */
   :root {
+    /* Dark text color for light backgrounds */
     color: #213547;
+    
+    /* White background for light theme */
     background-color: #ffffff;
   }
+  
+  /* Adjust link hover color for light theme */
   a:hover {
     color: #747bff;
   }
+  
+  /* Adjust button background for light theme */
   button {
     background-color: #f9f9f9;
   }

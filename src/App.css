@@ -1,42 +1,102 @@
+/**
+ * App.css - Component-specific styles for the React State Checkpoint application
+ * 
+ * This file contains styles that are specific to the App component and its children.
+ * It demonstrates various CSS concepts including:
+ * - Layout and positioning
+ * - Transitions and animations
+ * - Hover effects and interactive states
+ * - Responsive design considerations
+ * - CSS custom properties and modern features
+ */
+
+/* Root container styling - sets the main layout boundaries */
 #root {
+  /* Maximum width constraint for better readability on large screens */
   max-width: 1280px;
+  
+  /* Center the content horizontally using auto margins */
   margin: 0 auto;
+  
+  /* Add internal spacing around the content */
   padding: 2rem;
+  
+  /* Center-align text content within the container */
   text-align: center;
 }
 
+/* Logo styling - applies to elements with the 'logo' class */
 .logo {
+  /* Set a fixed height for consistent logo sizing */
   height: 6em;
+  
+  /* Add internal spacing around the logo */
   padding: 1.5em;
+  
+  /* Performance optimization: tells browser this element will change */
+  /* This helps the browser optimize rendering for animations */
   will-change: filter;
+  
+  /* Smooth transition effect for filter changes */
+  /* 300ms duration provides a pleasant user experience */
   transition: filter 300ms;
 }
+
+/* Logo hover effect - applies when user hovers over logo */
 .logo:hover {
+  /* Add a subtle drop shadow effect on hover */
+  /* Creates depth and visual feedback for user interaction */
   filter: drop-shadow(0 0 2em #646cffaa);
+  
+  /* Color breakdown:
+     #646cff - Blue color
+     aa - Alpha channel (transparency) - 66% opacity */
 }
+
+/* Special styling for React logo - applies when logo has both 'logo' and 'react' classes */
 .logo.react:hover {
+  /* Different hover effect for React logo */
+  /* Uses React's signature blue color (#61dafb) */
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* Keyframe animation definition for logo spinning effect */
 @keyframes logo-spin {
+  /* Starting position - no rotation */
   from {
     transform: rotate(0deg);
   }
+  
+  /* Ending position - full 360-degree rotation */
   to {
     transform: rotate(360deg);
   }
 }
 
+/* Media query for users who prefer reduced motion */
+/* This is an accessibility feature for users with motion sensitivity */
 @media (prefers-reduced-motion: no-preference) {
+  /* Target the second anchor tag that contains a logo */
   a:nth-of-type(2) .logo {
+    /* Apply the spinning animation */
     animation: logo-spin infinite 20s linear;
+    
+    /* Animation properties breakdown:
+       - logo-spin: name of the keyframe animation
+       - infinite: animation repeats forever
+       - 20s: duration of each rotation cycle
+       - linear: constant speed throughout the animation */
   }
 }
 
+/* Card component styling - applies to elements with 'card' class */
 .card {
+  /* Add internal spacing for card content */
   padding: 2em;
 }
 
+/* Documentation link styling - applies to elements with 'read-the-docs' class */
 .read-the-docs {
+  /* Muted text color for secondary information */
   color: #888;
 }
